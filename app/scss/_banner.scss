@@ -1,0 +1,52 @@
+.banner {
+  color: $lightGray;
+  text-align: center;
+
+  &__content {
+    background-color: $darkViolet;
+    padding: 4.6875rem 1.5625rem;
+    margin-bottom: 8.75rem;
+    background-image: url('/images/bg-pattern-how-we-work-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right top;
+  }
+
+  &__title {
+    font-size: 2.1875rem;
+    line-height: 1.15;
+    margin-bottom: 2.5rem;
+  }
+
+  &__cta {
+    border-color: $lightGray;
+    color: $lightGray;
+
+    &:hover {
+      background-color: $lightGray;
+      color: $darkViolet;
+    }
+  }
+
+  @include breakpoint-up(large) {
+    text-align: left;
+
+    .banner__content {
+      background-image: url('/images/bg-pattern-how-we-work-desktop.svg');
+    }
+    .banner__content {
+      padding: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .banner__title {
+      margin-bottom: 0;
+      font-size: 45px;
+      max-width: 39%;
+    }
+  }
+
+
+}

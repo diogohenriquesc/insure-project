@@ -1,0 +1,84 @@
+html {
+  font-size: 100%;
+  // scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  list-style-type: none;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $fontKarla;
+}
+
+//links 
+a, a:visited, a:hover {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+// Text
+
+h1, h2, h3 {
+  font-family: $fontDMSerif;
+}
+
+p {
+  font-weight: 700;
+}
+
+//Button
+.button {
+  padding: .8125rem 1.875rem;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: .875rem;
+  letter-spacing: .125rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border: 2px solid;
+  transition: all 250ms ease-in-out;
+}
+
+//Layout
+
+.container {
+  max-width: 76.5625rem;
+  margin-inline: auto;
+
+  &--py {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.locked {
+  touch-action: none;
+  overflow-y: hidden;
+}
+

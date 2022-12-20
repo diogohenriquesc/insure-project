@@ -1,0 +1,139 @@
+.intro {
+  background-color: $darkViolet;
+
+  &__content {
+    position: relative;
+  }
+
+  &__image {
+    min-height: 28.125rem;
+    background-image: url('/images/image-intro-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    position: relative;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    text-align: center;
+    color: $lightGray;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      background-image: url('/images/bg-pattern-intro-left-mobile.svg');
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -17.5rem;
+      width: 130px;
+      height: 100%;
+      background-image: url('/images/bg-pattern-intro-right-mobile.svg');
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
+    .intro__title {
+      font-size: 45px;
+      line-height: 1;
+      position: relative;
+      z-index: 99;
+    }
+
+    .intro__description {
+      padding-top: 1.5625rem;
+      padding-bottom: 2.1875rem;
+      line-height: 1.6;
+      font-size: 1rem;
+      position: relative;
+      z-index: 99;
+    }
+
+    button {
+      border-color: $lightGray;
+      color: $lightGray;
+
+      &:hover {
+        background-color: $lightGray;
+        color: $darkViolet;
+      }
+    }
+  }
+
+  
+  @include breakpoint-up(large) {
+      position: relative;  
+
+      &::before {
+        content: '';
+        background-image: url('/images/bg-pattern-intro-left-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        bottom: -78%;
+        height: 100%;
+        width: 150px;
+      }
+
+      &::after {
+        content: '';
+        background-image: url('/images/bg-pattern-intro-right-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+      }
+      
+
+    .intro__image {
+      background-image: url('/images/image-intro-desktop.jpg');
+      position: absolute;
+      right: 0;
+      top: 6.25rem;
+      width: 38.25rem;
+      height: 39.0625rem;
+    }
+
+    .intro__text {
+      text-align: start;
+      max-width: 48%;
+      background-image: none;
+
+      &::before {
+        content: none;
+      }
+
+      &::after {
+        content: none;
+      }
+
+      h1 {
+        font-size: 75px;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 180px;
+          height: 2px;
+          margin-bottom: 60px;
+          background-color: $lightGray;
+        }
+      }
+    }
+  }
+}
